@@ -1,0 +1,22 @@
+<section data-ng-controller="VideosController">
+    <div data-infinite-scroll="loadMore()" infinite-scroll-disabled="busy">
+        <div data-ng-repeat="video in videos" class="row">
+            <div class="col-xs-12 col-md-2"></div>
+            <div class="col-xs-12 col-md-8">
+            <div ng-bind-html-unsafe="video.url" class="video-container">
+            </div>
+            <div class="vid-desc-container clearfix">
+                <div class="vid-desc">
+                    {{video.desc}}
+                </div>
+                <div class="vid-date">
+                    <span>{{video.month}}</span>
+                    <span>{{video.day}}</span>
+                </div>
+                </div>
+            <div class="col-xs-12 col-md-2"></div>
+        </div>
+        <div class="spinner" data-ng-show="spinner"></div>
+    </div>
+    
+</section>

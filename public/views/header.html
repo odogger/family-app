@@ -1,0 +1,72 @@
+    <!--<div class="navbar-inner" data-ng-controller="HeaderController">
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="/" class="navbar-brand">Three Olsons</a>
+                                            <a class="brand" href="/">Three Olsons</a>
+                                        </li>
+                                        <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                                            <a href="#!/{{item.link}}">{{item.title}}</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav pull-right" data-ng-hide="global.authenticated">
+                                        <li><a href="signup">Signup</a>
+                                        </li>
+                                        <li class="divider-vertical"></li>
+                                        <li><a href="signin">Signin</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav pull-right" data-ng-show="global.authenticated">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                {{global.user.name}} <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/signout">Signout</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>-->
+<!--<a class="sr-only" href="#content">Skip to main content</a>-->
+<!-- Docs master nav -->
+<header class="navbar navbar-inverse navbar-fixed-top navbar-fixed-top-closed" data-ng-controller="HeaderController">
+    <div class="navbar-inverse-wrap">
+        <div class="container top-marg">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hidden-xs hidden-sm ">
+                        <a href="/" class="navbar-brand">
+                            <span class="nb-main">Three Olsons</span>
+                            </br>
+                            <div class="nb-tiny-c">
+                                <span class="nb-tiny">Family.</span>
+                                <span class="nb-tiny">Love.</span>
+                                <span class="nb-tiny">Fun.</span>
+                                <span class="nb-tiny">Adventure.</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hidden-lg hidden-md header-xs">
+                        <a href="/" class="navbar-brand">
+                            <span class="nb-main">3-O</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav2" ui-route="/photos/page1" ng-class="{active: $uiRoute}">
+                    <a class="icon-camera" href="/#!/photos/page1"></a>
+                </div>
+                <div class="nav2" ui-route="/videos/page1" ng-class="{active: $uiRoute}">
+                    <a class="icon-camera2" href="/#!/videos/page1"></a>
+                </div>
+                <div class="nav2" ui-route="/us" ng-class="{active: $uiRoute}">
+                    <a class="icon-feed" href="/#!/us"></a>
+                </div>                
+            </div>
+        </div>
+    </div>
+</header>

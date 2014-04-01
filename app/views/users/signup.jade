@@ -1,0 +1,28 @@
+extends ../layouts/default
+block content
+ .row
+  .col-md-6.col-md-offset-3
+   form.signup(action="/users", method="post")
+    p.error= message
+    .form-group
+      label.control-label(for='name') Full name
+      input#name.form-control.block-level(type='text', name="name", placeholder='Full name', value=user.name)
+
+    .form-group
+      label.control-label(for='email') Email
+      input#email.form-control.block-level(type='email', name="email", placeholder='Email', value=user.email)
+
+    .form-group
+      label.control-label(for='username') Username
+      input#username.form-control.block-level(type='text', name="username", placeholder='Username', value=user.username)
+
+    .form-group
+      label.control-label(for='password') Password
+      input#password.form-control.block-level(type='password', name="password", placeholder='Password')
+
+    .form-group
+     br
+     button.btn.btn-primary(type='submit') Sign up
+     &nbsp;
+     |or &nbsp;
+     a.btn.btn-default(href="/signin") Login

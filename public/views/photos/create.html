@@ -1,0 +1,70 @@
+<section data-ng-controller="PhotosController">
+    <div class="row">
+        <div class="col-xs-12"><h1>Add a photo</h1></div>
+    </div>
+    <div class="row" data-ng-controller="FileUploadController">
+        <div class="col-xs-12 col-md-2"></div>
+        <div class="col-xs-3 col-md-1">
+            <div>
+                <div style="position:relative; top:32px;">
+                    <a class="btn btn-primary btn-sm" href="javascript:;">
+			upload
+                        <input data-ng-file-select="onFileSelect($files)" type="file" style="width: 83px; height:35px; position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';opacity:0;background-color:transparent;color:transparent;" name="file_source" size="40">
+                    </a>
+		&nbsp;
+                    <span class="label label-info" id="upload-file-info"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-md-1">
+            <div class="response" ng-show="uploadResult.length > 0">
+                <div ng-repeat="result in uploadResult">
+                    <div ng-repeat="item in result">
+                                                    <!--<div data-ng-show="item.name">file name: {{item.name}}</div>
+                                                                <div data-ng-show="item.fieldName">name: {{item.fieldName}}</div>
+                                                                <div data-ng-show="item.size">size on the serve: {{item.size}}</div>-->
+                        <img alt="img" style="z-index:200; position: absolute;top: 36px; border-radius: 3px; height: 28px; width: 28px; border: 2px solid white" src="{{item.value}}" data-ng-show="item.value" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="control-label" for="title">Url</label>
+                <div class="controls">
+                    <input class="form-control block-level" type="text" data-ng-model="url" id="url" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-2"></div>
+        <div class="col-md-8 col-xs-12">
+            <form class="" data-ng-submit="create()">
+                <div class="form-group">
+                    <label class="control-label" for="title">Title</label>
+                    <div class="controls">
+                        <input class="form-control block-level" type="text" data-ng-model="title" id="title" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="desc">Description</label>
+                    <div class="controls">
+                        <textarea class="form-control block-level" data-ng-model="desc" id="desc" cols="30" rows="10" placeholder=""></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="col-xs-12 col-md-2"></div>
+    </div>
+
+</section>

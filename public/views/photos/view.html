@@ -1,0 +1,7 @@
+<section data-ng-controller="PhotosController" data-ng-init="findOne()">
+	<span>{{photo.created | date:'medium'}}</span> /
+	<span>{{photo.user.name}}</span>
+	<h2>{{photo.title}} <a data-ng-show="global.user._id == photo.user._id" href="/#!/photos/{{photo._id}}/edit">edit</a></h2>
+	<div>{{photo.desc}}</div>
+    <div>{{photo.url}}</div>
+</section>

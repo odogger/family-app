@@ -1,0 +1,25 @@
+<section data-ng-controller="PhotosController">
+    <div data-infinite-scroll="loadMore()" data-infinite-scroll-distance="2" data-infinite-scroll-disabled="busy">
+        <div data-ng-repeat="photo in photos" class="row">
+            <div class="col-xs-12 col-md-2"></div>
+            <div class="col-xs-12 col-md-8">
+                <div class="post">
+                    <div class="post-wrapper">
+                        <div class="post-date">
+                            <span>{{photo.month}}</span>
+                            <span>{{photo.day}}</span>
+                        </div>
+
+                        <div class="post-desc">
+                {{photo.desc}}
+                        </div>
+                        <img alt="{{photo.created | date:'medium'}}" class="img" src="{{photo.url}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2"></div>
+        </div>
+        <div class="spinner" data-ng-show="spinner"></div>
+    </div>
+    
+</section>
